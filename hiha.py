@@ -15,6 +15,11 @@ class SkibidiToilet:
     def __str__(self):
         return f"Твой скибиди туалет {self.name} имеет редкость {self.sl()}"
 
+def filter(n):
+    try:
+        return int(n)
+    except ValueError:
+        print("Idiot I asked number")
 
 def wow(n):
     if n == 67:
@@ -23,9 +28,6 @@ def wow(n):
         print("good boy:)")
 
 print("Hihahahaha")
-try:
-    num = int(input("Pls enter number:\n"))
-except ValueError:
-    print("Idiot I asked number")
-else:
+num = input("Pls enter number:\n")
+if filter(num):
     wow(num)
